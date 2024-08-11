@@ -20,9 +20,12 @@ class GridBackgroundBuilder extends StatelessWidget {
     final int firstCol = (viewport.left / cellWidth).floor();
     final int lastCol = (viewport.right / cellWidth).ceil();
 
-    final colors = Theme.of(context).colorScheme;
+    // final colors = Theme.of(context).colorScheme;
+    // const Color customGridColor = Color.fromRGBO(51, 50, 56, 1);
+    const Color customGridColor = Color.fromRGBO(255, 255, 255, 1);
     return Material(
-      color: colors.background,
+      // color: colors.background,
+      color: customGridColor,
       child: Stack(
         clipBehavior: Clip.none,
         children: <Widget>[
@@ -36,7 +39,8 @@ class GridBackgroundBuilder extends StatelessWidget {
                   width: cellWidth,
                   decoration: BoxDecoration(
                     border: Border.all(
-                      color: colors.onBackground.withOpacity(0.1),
+                      color: customGridColor,
+                      // color: colors.onBackground.withOpacity(0.1),
                       width: 1,
                     ),
                   ),
