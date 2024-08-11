@@ -21,8 +21,7 @@ class GridBackgroundBuilder extends StatelessWidget {
     final int lastCol = (viewport.right / cellWidth).ceil();
 
     // final colors = Theme.of(context).colorScheme;
-    // const Color customGridColor = Color.fromRGBO(51, 50, 56, 1);
-    const Color customGridColor = Color.fromRGBO(255, 255, 255, 1);
+    const Color customGridColor = Color.fromRGBO(51, 50, 56, 1);
     return Material(
       // color: colors.background,
       color: customGridColor,
